@@ -1,1 +1,15 @@
 #+STARTUP: overview
+#+SEQ_TODO: PROCESS(p) NEXT(n) TODO(t) WAITING(w) SOMEDAY(s) | DONE(d) CANCELLED(c)
+
+* Create Table
+** DONE Draw board
+   Sketching in notability:
+   - Play board
+   - Winning posibility for both hounds and hare
+** DONE Draw with javafx
+   - The board
+     
+* TODO Create Pawn and move on table
+  1. Create a simple pawn first
+  2. Try to move the pawn with mouse click
+  3. create more pawn
