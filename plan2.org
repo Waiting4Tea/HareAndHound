@@ -1,4 +1,7 @@
 #+STARTUP: overview
+#+OPTIONS: html-postamble:nil
+#+OPTIONS: html-preamble:nil html-scripts:nil html-style:nil
+#+OPTIONS: html5-fancy:nil tex:t
 #+SEQ_TODO: PROCESS(p) NEXT(n) TODO(t) WAITING(w) RESCHEDULE(r) | DONE(d) CANCELLED(c)
 
 
@@ -13,7 +16,7 @@
   (org-babel-do-load-languages
     'org-babel-load-languages
        '((java . t)
-	  ;;(python . t)
+	 (python . t)
 	 )
   )
   ;; stop emacs asking for confirmation, for this buffer only
@@ -51,24 +54,31 @@
   - Remember that peð can only move one step
   - Winning posibility of both Hare and Hounds
     + Hare winning posibility:
-      #+BEGIN_SRC java :classname hello :results output
+      #+BEGIN_SRC java :classname hello :results output html
 	class hello {
 	    public static void main(String[] args) {
-		for(int i=0; i<3; i++) {
-		    System.out.println("Hello not yet");
-		    System.out.println("Whattt");
-		    System.out.println("No export");
-		    System.out.println("No No");
-		    System.out.println("no saving?");
-		}
+		String s = "Hello World";
+		prenta(s);
+	    }
+
+	    public static void prenta(String s) {
+		System.out.println(s);
 	    }
 	}
       #+END_SRC
 
       #+RESULTS:
-      : Hello not yet
-      : Hello not yet
-      : Hello not yet
+      #+begin_export html
+      Hello World
+      #+end_export
+      
+      - Python code
+      #+BEGIN_SRC python :results output
+	print("Hello")
+      #+END_SRC
+
+      #+RESULTS:
+      : Hello
 
       
 * TODO Skref
