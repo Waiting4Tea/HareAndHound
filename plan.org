@@ -56,6 +56,7 @@
 		    System.out.println("Hello not yet");
 		    System.out.println("Whattt");
 		    System.out.println("No export");
+		    System.out.println("No No");
 		    System.out.println("no saving?");
 		}
 	    }
@@ -67,7 +68,7 @@
       : Hello not yet
       : Hello not yet
 
-    
+      
 * TODO Skref
 ** Búa til Hare og Hounds class
 *** Hounds class geri:
