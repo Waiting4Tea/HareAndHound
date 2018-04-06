@@ -1,5 +1,4 @@
 #+STARTUP: overview
-SEQ_TODO: PROCESS(p) NEXT(n) TODO(t) WAITING(w) SOMEDAY(s) | DONE(d) CANCELLED(c)
 
 * COMMENT Have to execute this code before use org-babel
   - to execute move cursor to the BEGIN line and do this: "Ctrl+c Ctrl+c"
@@ -45,7 +44,7 @@ SEQ_TODO: PROCESS(p) NEXT(n) TODO(t) WAITING(w) SOMEDAY(s) | DONE(d) CANCELLED(c
   2. Try to move the pawn with mouse click
   3. create more pawn
 
-* Write algorithm
+* PROCESS Write algorithm
   - Create "Table" to move peð and to check for winning
   - Remember that peð can only move one step
   - Winning posibility of both Hare and Hounds
@@ -69,8 +68,8 @@ SEQ_TODO: PROCESS(p) NEXT(n) TODO(t) WAITING(w) SOMEDAY(s) | DONE(d) CANCELLED(c
       : Hello not yet
 
     
-* Skref
-** PROCESS Búa til Hare og Hounds class
+* TODO Skref
+** Búa til Hare og Hounds class
 *** Hounds class geri:
     1. Teikna 3 ferningar á borðið
     2. Færa ferningar um borðið
@@ -79,7 +78,7 @@ SEQ_TODO: PROCESS(p) NEXT(n) TODO(t) WAITING(w) SOMEDAY(s) | DONE(d) CANCELLED(c
     1. Teikna hringur á borðið
     2. Færa hringur um borðið
        
-* About the Game
+* TODO About the Game
 ** History
    The game seems to have originated in 19th century France, and became popular with French military officers during the Franco-Prussian War of 1870-1871. This gave rise to its alternative title "French Military Game". An article by Martin Gardner in the journal Scientific American generated further interest in the game in 1963, and it has become popular with computer programmers due to the ease of implementing its simple rules.
 ** Rules
