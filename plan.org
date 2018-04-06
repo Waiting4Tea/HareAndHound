@@ -44,7 +44,7 @@
   2. Try to move the pawn with mouse click
   3. create more pawn
 
-* PROCESS Write algorithm
+* NEXT Write algorithm
   - Create "Table" to move peð and to check for winning
   - Remember that peð can only move one step
   - Winning posibility of both Hare and Hounds
