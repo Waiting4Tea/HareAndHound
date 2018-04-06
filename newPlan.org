@@ -1,4 +1,6 @@
 #+STARTUP: overview
+#+SEQ_TODO: PROCESS(p) NEXT(n) TODO(t) WAITING(w) RESCHEDULE(r) | DONE(d) CANCELLED(c)
+
 
 * COMMENT Have to execute this code before use org-babel
   - to execute move cursor to the BEGIN line and do this: "Ctrl+c Ctrl+c"
