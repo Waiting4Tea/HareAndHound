@@ -1,7 +1,7 @@
 #+STARTUP: overview
 SEQ_TODO: PROCESS(p) NEXT(n) TODO(t) WAITING(w) SOMEDAY(s) | DONE(d) CANCELLED(c)
 
-* Have to execute this code before use org-babel
+* COMMENT Have to execute this code before use org-babel
   - to execute move cursor to the BEGIN line and do this: "Ctrl+c Ctrl+c"
 ==================================================================================
 ===================== How to coding java inside org with babel ===================
@@ -55,15 +55,18 @@ SEQ_TODO: PROCESS(p) NEXT(n) TODO(t) WAITING(w) SOMEDAY(s) | DONE(d) CANCELLED(c
 	    public static void main(String[] args) {
 		for(int i=0; i<3; i++) {
 		    System.out.println("Hello not yet");
+		    System.out.println("Whattt");
+		    System.out.println("No export");
+		    System.out.println("no saving?");
 		}
 	    }
 	}
       #+END_SRC
 
       #+RESULTS:
-      | Hello | not | yet |
-      | Hello | not | yet |
-      | Hello | not | yet |
+      : Hello not yet
+      : Hello not yet
+      : Hello not yet
 
     
 * Skref
