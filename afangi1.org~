@@ -1,0 +1,158 @@
+#+STARTUP: overview
+#+SEQ_TODO: PROCESS(p) NEXT(n) TODO(t) WAITING(w) RESCHEDULE(r) | DONE(d) CANCELLED(c)
+#+OPTIONS: num:nil toc:nil
+#+LATEX_HEADER: \usepackage{geometry}\geometry{a4paper, total={170mm,257mm}, left=20mm, right=20mm,}
+
+
+* COMMENT Place
+** DONE This line below is for turn off numbers in front of heading and for turn off table-of-contents feature see link below:
+   https://www.sharelatex.com/learn/Table_of_contents
+   #+OPTIONS: num:nil toc:nil
+  
+** DONE This line below will add List-of-tables-and-figures see link below:
+   https://www.sharelatex.com/learn/Lists_of_tables_and_figures
+   #+TOC: listings
+
+** DONE This show how to insert image file to pdf
+   - first put this on top of the link to export ATTR_LATEX: width 100
+   - do first [[]]
+   - then inside the bracket do ./directory/to/image.png
+   - example:
+   #+ATTR_LATEX: :width 5cm
+   [[./hah_start_game_logo.png]]
+
+
+** DONE Some Table example
+   - Table 1:
+     + use "Ctrl+c -" to create a line below.
+     + use "Shift + Alt + DOWN" to insert new line below.
+     + and use these line when export file.
+     #+ATTR_LaTeX: :align |c|c|c|c| :align -c-c-c-
+     #+ATTR_HTML: :border 2 :rules all :frame border
+     |--------+----------+---------+-------|
+     | *Name* | *Adress* | *Roles* | *NEW* |
+     |--------+----------+---------+-------|
+     | Caesar | Mars     | citizen |     1 |
+     | Julius | Jupiter  | citizen |     2 |
+     | Gaius  | Earth    | citizen |     3 |
+     |--------+----------+---------+-------|
+     #+TBLFM: 
+    
+
+   - Table 2:
+     | N | N^2 | N^3 | N^4 | ~sqrt(n)~ | ~sqrt[4](N)~ |
+     |---+-----+-----+-----+-----------+--------------|
+     | / |   < |     |   > |         < |            > |
+     | 1 |   1 |   1 |   1 |         1 |            1 |
+     | 2 |   4 |   8 |  16 |    1.4142 |       1.1892 |
+     | 3 |   9 |  27 |  81 |    1.7321 |       1.3161 |
+     |---+-----+-----+-----+-----------+--------------|
+     #+TBLFM: $2=$1^2::$3=$1^3::$4=$1^4::$5=sqrt($1)::$6=sqrt(sqrt(($1)))
+
+    
+* DONE Áfangi 1: Þarfagreining, viðmótshönnun
+** 1. *Kröfulýsing* 
+  - *Nafn kerfis:* Hare and Hounds board game
+  - *Höfundur:* Cuong Hung Pham
+  - *Dagsetning:* 08.04.2018
+    
+
+    #+ATTR_LaTeX: :align |c|c|c|c|c|
+    |------------+-----------------------------------+----------------+-----------------------+----------|
+    | *Auðkenni* | *Ein setning sem lýsir kröfunni*  | *Gagnvikrnis/* | *Rökstuðningur*       | *MoSCoW* |
+    |            |                                   | *Virkniskrafa* | *kröfunnar*           |          |
+    |------------+-----------------------------------+----------------+-----------------------+----------|
+    |------------+-----------------------------------+----------------+-----------------------+----------|
+    |          1 | Búa til nýtt spilaborð            | G              | Útlit fyrir notandans | M        |
+    |            | eins og myndið að neðan           |                |                       |          |
+    |------------+-----------------------------------+----------------+-----------------------+----------|
+    |          2 | Búa til nýtt notendaviðmót        | G              | Upplifun notandans    | M        |
+    |            | samanber mynd 2 í teiknimyndasögu |                | verður skemtilegri    |          |
+    |------------+-----------------------------------+----------------+-----------------------+----------|
+    |          3 | Hare vinnur leikinn þegar hann    |                | Samkvæmt              |          |
+    |            | náði að fara vinstra megin        | V              | leikreglum            | M        |
+    |            | Hounds                            |                |                       |          |
+    |------------+-----------------------------------+----------------+-----------------------+----------|
+    |          4 | Hounds vinnur ef þeir náðir       |                | Samkvæmt              |          |
+    |            | að blokka Hare, svo ef Hare       | V              | leikreglum            | M        |
+    |            | náði ekkert að færa þá vinnur     |                |                       |          |
+    |            | Hounds                            |                |                       |          |
+    |------------+-----------------------------------+----------------+-----------------------+----------|
+    |          5 | Bæta við rules, hint og           |                | Styttra leið til að   |          |
+    |            | strategies eins og mynd 3         | G              | nánar leikreglur      | C        |
+    |            | í teiknimyndasögu                 |                | í staðin að fara í    |          |
+    |            |                                   |                | Menubar-ið            |          |
+    |------------+-----------------------------------+----------------+-----------------------+----------|
+    |          6 | Setja inn litir og myndir í       |                | Upplifun notandans    |          |
+    |            | Upplýsinga glugga, einig bæta     | G              | verður betri          | C        |
+    |            | verður við sá sem vinnur leikinn  |                | og skemtilegri        |          |
+    |------------+-----------------------------------+----------------+-----------------------+----------|
+
+
+
+
+** Sýnishorn af Hare and Hounds spilaborð:
+   #+ATTR_LaTeX: :width 7cm :height 5cm
+   [[./hah_img.png]]
+
+   
+
+** 2. Teiknimyndasögu:
+   #+ATTR_LaTeX: :width 17cm :height 17cm
+   [[./teiknimyndasogu.jpg]]
+   
+* PROCESS Coding
+  
+** COMMENT Have to execute this code before use org-babel
+  - to execute move cursor to the BEGIN line and do this: "Ctrl+c Ctrl+c"
+==================================================================================
+===================== How to coding java inside org with babel ===================
+================================= START ==========================================
+
+#+BEGIN_SRC emacs-lisp :result nil
+  ;; This code below enable add and run java-code inside of org
+  (org-babel-do-load-languages
+    'org-babel-load-languages
+       '((java . t)
+	 )
+  )
+  ;; stop emacs asking for confirmation, for this buffer only
+  (setq-local org-confirm-babel-evaluate nil)
+
+#+END_SRC
+
+#+RESULTS:
+
+=================================== END ==========================================
+
+** Leikreglur
+#+begin_src java :classname leikreglur :results output
+  class leikreglur {
+      public static void main(String[] args) {
+	  rules();
+      }
+
+
+      /**
+       ,* ímyndum að við erum með borðið
+       ,* svo tökum peð og færa peðið
+       ,*/
+      private static void rules() {
+	  for(int i=0; i<3; i++) {
+	      for(int j=0; j<5; j++) {
+		  System.out.print("i ");
+	      }
+	      System.out.println();
+	  }
+      }
+
+      private static winning() {
+	
+      }
+  }
+#+end_src
+
+#+RESULTS:
+: i i i i i 
+: i i i i i 
+: i i i i i 

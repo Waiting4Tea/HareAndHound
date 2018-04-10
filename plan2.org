@@ -44,7 +44,7 @@
 ** DONE Draw with javafx
    - The board
      
-* DONE Create Pawn and move on table
+* DONE COMMENT Create Pawn and move on table
   1. Create a simple pawn first
   2. Try to move the pawn with mouse click
   3. create more pawn
@@ -57,19 +57,25 @@
       #+BEGIN_SRC java :classname hello :results output html
 	class hello {
 	    public static void main(String[] args) {
-		String s = "Hello World";
-		prenta(s);
+		algoR();
+	    }
+	    public static void algoR() {
+		for(int i=0; i<3; i++) {
+		    for(int j=0; j<5; j++) {
+			System.out.print("*");
+		    }
+		    System.out.println();
+		}
 	    }
 
-	    public static void prenta(String s) {
-		System.out.println(s);
-	    }
 	}
       #+END_SRC
 
       #+RESULTS:
       #+begin_export html
-      Hello World
+      *****
+      *****
+      *****
       #+end_export
       
       - Python code
@@ -81,6 +87,7 @@
       : Hello
 
       
+     
 * TODO Skref
 ** Búa til Hare og Hounds class
 *** Hounds class geri:
