@@ -137,9 +137,9 @@
        ,* a comment inside java org-babel
        ,*/
       private static void rules() {
-	  int[][] a = new int[3][5];
+	  int[][] a = new int[3][3];
 	  int tala = 0;
-	  for(int i=0; i<5; i++) {
+	  for(int i=0; i<3; i++) {
 	      for(int j=0; j<3; j++) {
 		  a[i][j] = tala++;
 		  System.out.print(a[i][j] + " ");
@@ -147,15 +147,13 @@
 	      System.out.println();
 	  }
 
-
-	  int[] b = new int[15];
-	  for(int i=0; i<15; i++) {
-	      b[i] = a[i/3][i%3];
+	  int[] b = new int[9];
+	  for(int i=0; i<9; i++) {
+	      b[i] = a[i/3][(i%3)];
 	      System.out.print(b[i] + " ");
 	  }
 
       }
-
   }
 #+end_src
 
