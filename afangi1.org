@@ -204,6 +204,8 @@
     }
     // end new change
     
+    // Add a new text
+    // blabla
     
 
   }
