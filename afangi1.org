@@ -160,13 +160,13 @@
 
 
       // new change
-      /**
-       ,* Nota fallið til að ath á vinningur
-       ,* skila 1 ef Hare vann leikinn, 2 ef Hounds vann leikinn, 0 ef eingin vann
-       ,* @param a er spilatöflu sem er í formið 2d array
-       ,* @return vinningur
-       ,*/
-      public int tekkaVinningur(int[][] a) {
+    /**
+     * Nota fallið til að ath á vinningur
+     * skila 1 ef Hare vann leikinn, 2 ef Hounds vann leikinn, 0 ef eingin vann
+     * @param a er spilatöflu sem er í formið 2d array
+     * @return vinningur
+     */
+    public int tekkaVinningur(int[][] a) {
 	  int vinningur = 0;
 	  // Hounds er með tölu 1
 	  // Hare er með tölu 2
@@ -195,66 +195,66 @@
 	  // ATH HARE WINS
 	  // Hare vann þegar er í miðju spilaborð í eftirfarandi svæði
 	  // möguleika 1 þegar Hare er í svæði a[1][1]
-	  if(a[1][1]==1 && (a[0][1]==2 || a[2][1]==2) && isHoundsOTL(1)==true) {
+	  if(a[1][1]==1 && (a[0][1]==2 || a[2][1]==2) && isHoundsOTL(a,1)==true) {
 	      vinningur = 2;
 	      return vinningur;
 	  }
 	  // möguleika 2 þegar Hare er í svæði a[1][2]
-	  if(a[1][2]==1 && (a[0][2]==2 || a[2][2]==2) && isHoundsOTL(2)==true) {
+	  if(a[1][2]==1 && (a[0][2]==2 || a[2][2]==2) && isHoundsOTL(a,2)==true) {
 	      vinningur = 2;
 	      return vinningur;
 	  }
 	  // möguleika 3 þegar Hare er í svæði a[1][3]
-	  if(a[1][3]==1 && (a[0][3]==2 || a[2][3]==2) && isHoundsOTL(3)==true) {
+	  if(a[1][3]==1 && (a[0][3]==2 || a[2][3]==2) && isHoundsOTL(a,3)==true) {
 	      vinningur = 2;
 	      return vinningur;
 	  }
 
 	  // Hare vann þegar er í efri spilaborð í eftirfarandi svæði
 	  // möguleika 1 þegar Hare er í svæði a[0][1]
-	  if(a[0][1]==1 && (a[1][1]==2 || a[2][1]==2) && isHoundsOTL(1)==true ) {
+	  if(a[0][1]==1 && (a[1][1]==2 || a[2][1]==2) && isHoundsOTL(a,1)==true ) {
 	      vinningur = 2;
 	      return vinningur;
 	  }
 	  // möguleika 2 þegar Hare er í svæði a[0][2]
-	  if(a[0][2]==1 && (a[1][2]==2 || a[2][2]==2) && isHoundsOTL(2)==true) {
+	  if(a[0][2]==1 && (a[1][2]==2 || a[2][2]==2) && isHoundsOTL(a,2)==true) {
 	      vinningur = 2;
 	      return vinningur;
 	  }
 	  // möguleika 3 þegar Hare er í svæði a[0][3]
-	  if(a[0][3]==1 && (a[1][3]==2 || a[2][3]==2) && isHoundsOTL(3)==true) {
+	  if(a[0][3]==1 && (a[1][3]==2 || a[2][3]==2) && isHoundsOTL(a,3)==true) {
 	      vinningur = 2;
 	      return vinningur;
 	  }
 
 	  // Hare vann þegar er í neðri spilaborð í eftirfarandi svæði
 	  // möguleika 1 þegar Hare er í svæði a[2][1]
-	  if(a[2][1]==1 && (a[0][1]==2 || a[1][1]==2) && isHoundsOTL(1)==true) {
+	  if(a[2][1]==1 && (a[0][1]==2 || a[1][1]==2) && isHoundsOTL(a,1)==true) {
 	      vinningur = 2;
 	      return vinningur;
 	  }
 	  // möguleika 2 þegar Hare er í svæði a[2][2]
-	  if(a[2][2]==1 && (a[0][2]==2 || a[1][2]==2) && isHoundsOTL(2)==true) {
+	  if(a[2][2]==1 && (a[0][2]==2 || a[1][2]==2) && isHoundsOTL(a,2)==true) {
 	      vinningur = 2;
 	      return vinningur;
 	  }
 	  // möguleika 3 þegar Hare er í svæði a[2][3]
-	  if(a[2][3]==1 && (a[0][3]==2 || a[1][3]==2) && isHoundsOTL(3)==true) {
+	  if(a[2][3]==1 && (a[0][3]==2 || a[1][3]==2) && isHoundsOTL(a,3)==true) {
 	      vinningur = 2;
 	      return vinningur;
 	  }
 	  return -1;
-      }
+    }
 
-      /**
-       ,* Fallið is_Hounds_On_The_Left tákna sem isHoundsOTL
-       ,* tekur inn númer dálka sem Hare er í
-       ,* og síðan ath á alla dálkar sem er vinstra megin
-       ,* af því
-       ,* @param column er dálka sem Hare er núna staðsett
-       ,* @return true ef það er ekkert Hounds annars false
-       ,*/
-      public boolean isHoundsOTL(int column) {
+    /**
+     * Fallið is_Hounds_On_The_Left tákna sem isHoundsOTL
+     * tekur inn númer dálka sem Hare er í
+     * og síðan ath á alla dálkar sem er vinstra megin
+     * af því
+     * @param column er dálka sem Hare er núna staðsett
+     * @return true ef það er ekkert Hounds annars false
+     */
+    public boolean isHoundsOTL(int[][] a, int column) {
 	  for(int i=0; i<3; i++) {
 	      for(int j=0; j<column; j++) {
 		  if(a[i][j]==2) {
@@ -263,7 +263,8 @@
 	      }
 	  }
 	  return true;
-      }
+    }
+    
       // end new change
 
 
