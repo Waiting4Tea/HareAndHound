@@ -154,6 +154,62 @@
 	  }
 
       }
+<<<<<<< HEAD
+=======
+      
+      
+      
+      
+      
+      // new change
+    /**
+     * Nota fallið til að ath á vinningur
+     * skila 1 ef er vinningur annars 0
+     * @param a er spilatöflu sem er í formið 2d array
+     * @return vinningur
+     */
+    public int tekkaVinningur(int[][] a) {
+        int vinningur = 0;
+        // Hounds er með tölu 1
+        // Hare er með tölu 2
+        // tómt svæði er 0
+        
+        // Ath Hounds wins
+        // allt að 3 möguleikar
+        // möguleika 1 þegar Hare er læst inná svæði a[0][2]
+        if(a[0][1]==1 && a[1][2]==1 && a[0][3]==1 && a[0][2]==2){
+            vinningur = 1;
+            return vinningur;
+        }
+        // möguleika 2 þegar Hare er læst inná svæði a[2][2]
+        if(a[2][1]==1 && a[1][2]==1 && a[2][3]==1 && a[2][2]==2) {
+            vinningur = 1;
+            return vinningur;
+        }
+        // möguleika 3 þegar Hare er læst inná svæði a[1][4]
+        if(a[0][3]==1 && a[1][3]==1 && a[2][3]==1 && a[1][4]==2) {
+            vinningur = 1;
+            return vinningur;
+        }
+        
+        // Ath Hare wins
+        if(a[1][1]==1 && (a[0][1]==2 || a[2][1]==2) && onTheLeft(0)==true) {
+            
+        }
+        
+        return -1;
+    }
+    
+    public boolean onTheLeft(int i) {
+        // forrita hér til að tékka allt svæði vinstra megin
+        return false;
+    }
+    // end new change
+    
+    
+    
+
+>>>>>>> ee5dfd3496498b20ce60edf4f438e2f363fe29f1
   }
 #+end_src
 
