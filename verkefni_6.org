@@ -101,7 +101,7 @@
    #+ATTR_LaTeX: :width 17cm :height 17cm
    [[./teiknimyndasogu.jpg]]
    
-* PROCESS Coding
+* PROCESS COMMENT Coding
   
 ** COMMENT Have to execute this code before use org-babel
   - to execute move cursor to the BEGIN line and do this: "Ctrl+c Ctrl+c"
@@ -334,3 +334,5 @@
     |---------------+--------+--------+------------+------------+--------+--------|
     #+TBLFM: $4=$2-16 :: $5=$3-16 :: $6=$2-31 :: $7=$3-32
 
+* PROCESS Lokaskil blabla
+#  this is some comment line
