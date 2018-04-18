@@ -125,7 +125,7 @@
 
 =================================== END ==========================================
 
-** NEXT Things to create
+** COMMENT Things finnished
 *** DONE Ath á vinningur
  #+begin_src java :classname leikreglur :results output
    class leikreglur {
@@ -273,6 +273,7 @@
  #+end_src
 
  #+RESULTS:
+** NEXT Things to create
 *** TODO Action
    - Move the Pawn
      1. Hounds can only move forward, up and down
