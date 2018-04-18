@@ -335,5 +335,8 @@
     #+TBLFM: $4=$2-16 :: $5=$3-16 :: $6=$2-31 :: $7=$3-32
 
 * PROCESS Lokaskil blabla
-  this is some #+BEGIN_COMMENT comment line #+END_COMMENT
+  this is some
+#+BEGIN_COMMENT
+ comment line
+#+END_COMMENT
   this is some # other comment
