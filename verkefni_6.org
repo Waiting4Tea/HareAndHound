@@ -273,7 +273,7 @@
  #+end_src
 
  #+RESULTS:
-** NEXT Things to create
+** NEXT COMMENT Things to create
 *** TODO Action
    - Move the Pawn
      1. Hounds can only move forward, up and down
