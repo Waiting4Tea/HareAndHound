@@ -1,0 +1,6 @@
+#+STARTUP: overview
+#+SEQ_TODO: PROCESS(p) NEXT(n) TODO(t) WAITING(w) RESCHEDULE(r) | DONE(d) CANCELLED(c)
+#+LATEX_HEADER: \usepackage{geometry}\geometry{a4paper, total={170mm,257mm}, left=20mm, right=20mm,}
+
+* Hare and Hounds board game
+  Viðmótsforritun, vor 2018
